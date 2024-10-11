@@ -10,8 +10,8 @@ from PIL import Image
 
 def resize_image(image, target_size=(100, 100)):
     # Convert the image (PIL or NumPy) to a PIL Image if necessary
-    #if isinstance(image, np.ndarray):
-    image = Image.fromarray(image)
+    if isinstance(image, np.ndarray):
+        image = Image.fromarray(image)
     
     # Resize the image
     resized_image = image.resize(target_size)
