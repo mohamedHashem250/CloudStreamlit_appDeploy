@@ -9,7 +9,7 @@ def flower_classification(img, weights_file):
     # Load the model
     #class labels from the iterator
     class_labels = {'daisy': 0, 'dandelion': 1, 'rose': 2, 'sunflower': 3, 'tulip': 4}
-    model =  models.load_model( weights_file)
+    model = load_model( weights_file)
 
     # Create the array of the right shape to feed into the keras model
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
