@@ -18,7 +18,7 @@ if uploaded_file is not None:
     st.write("Classifying...")
     label = classify_image(image)
     st.write(f"Prediction: {label}")
-    label = teachable_machine_classification(image, 'hyper_tuned_model.h5')
+    label = flower_classification(image, 'hyper_tuned_model.h5')
     if label == 'daisy':
   	    st.write("The Flower is  daisy")
     elif label ==  'dandelion':
